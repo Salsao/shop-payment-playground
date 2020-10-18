@@ -4,13 +4,36 @@ import PropTypes from 'prop-types';
 import { currencyValue } from '../../utils/currencyValue';
 
 import * as S from './styles';
+import { QUANTITY, SIZES } from '../../constants';
 
 const Product = ({ product }) => (
   <S.Card>
-    <img src={product?.thumbnailURL} alt="thumbnail" />
-    <span>{product?.description}</span>
-    <span>{currencyValue(product?.currency, product?.price)}</span>
-    <button>Add to cart</button>
+    <S.Thumbnail src={product?.thumbnailURL} alt="thumbnail" />
+    <S.Description>{product?.description}</S.Description>
+    <S.Options>
+      <S.Size>
+        Size{' '}
+        <select defaultValue={41}>
+          {SIZES.map(size => (
+            <option key={size} value={size}>
+              {size}
+            </option>
+          ))}
+        </select>{' '}
+      </S.Size>
+      <S.Quantity>
+        Quantity{' '}
+        <select defaultValue={1}>
+          {QUANTITY.map(quantity => (
+            <option key={quantity} value={quantity}>
+              {quantity}
+            </option>
+          ))}
+        </select>
+      </S.Quantity>
+    </S.Options>
+    <S.Price>{currencyValue(product?.currency, product?.price)}</S.Price>
+    <S.AddButton>Add to cart</S.AddButton>
   </S.Card>
 );
 
