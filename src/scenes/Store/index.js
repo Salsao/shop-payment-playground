@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import * as S from './styles';
+import Header from '../../components/Header';
 
-const Store = () => {
-  return <>Store</>;
-};
+const Store = () => (
+  <>
+    <Header title="Sneakers" />
+    Store
+  </>
+);
 
 export default Store;
