@@ -47,9 +47,7 @@ const Store = () => {
         />
       </S.ContainerFilter>
       <S.ContainerProducts>
-        {sneakers.map(sneaker => (
-          <Product key={sneaker.id} product={sneaker} />
-        ))}
+        {sneakers.length > 0 ? sneakers.map(sneaker => <Product key={sneaker.id} product={sneaker} />) : 'No matches found'}
       </S.ContainerProducts>
     </>
   );
