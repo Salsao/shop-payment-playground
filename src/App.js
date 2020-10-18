@@ -3,9 +3,10 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Store from './scenes/Store';
 import Checkout from './scenes/Checkout';
-import { CHECKOUT_PATH, STORE_PATH } from './constants';
-import './App.css';
 import { SneakerContext } from './context/Sneaker';
+import { CHECKOUT_PATH, STORE_PATH } from './constants';
+
+import './App.css';
 
 const App = () => {
   const [sneaker, setSneaker] = useState(null);
