@@ -1,5 +1,6 @@
 // Routes
 export const STORE_PATH = '/';
+export const CHECKOUT_PATH = '/checkout';
 
 // Currency
 export const CURRENCY_USD = 'USD';
