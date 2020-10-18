@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { getSneakers } from '../../api/store';
 
 import Header from '../../components/Header';
+import Product from '../../components/Product';
 
 import * as S from './styles';
 
@@ -20,12 +21,14 @@ const Store = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(sneakers);
-
   return (
     <>
       <Header title="Sneakers" />
-      <S.Container>Store</S.Container>
+      <S.Container>
+        {sneakers.map(sneaker => (
+          <Product key={sneaker.id} product={sneaker} />
+        ))}
+      </S.Container>
     </>
   );
 };

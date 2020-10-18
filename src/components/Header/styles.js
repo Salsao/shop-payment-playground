@@ -4,6 +4,7 @@ export const Header = styled.div`
   background-color: #f1f1f1;
   display: flex;
   height: 87px;
+  margin-bottom: 81px;
 `;
 
 export const HeaderContainer = styled.div`
