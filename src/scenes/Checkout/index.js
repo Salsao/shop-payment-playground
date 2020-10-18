@@ -25,6 +25,15 @@ const Checkout = () => {
   return (
     <>
       <Header title="Sneakers" hasBackButton />
+      <div>
+        <div className="progressbar-wrapper">
+          <ul className="progressbar">
+            <li className="active">Cart</li>
+            <li className="active">Payment options</li>
+            <li>Receipt</li>
+          </ul>
+        </div>
+      </div>
       <S.Container>
         <S.ImageContainer>
           <S.ProductImage src={sneaker?.maxresURL} alt="product" />
