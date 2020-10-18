@@ -28,7 +28,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  hasBackButton: true
+  hasBackButton: false
 };
 
 export default Header;

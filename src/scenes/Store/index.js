@@ -4,13 +4,16 @@ import { getSneakers } from '../../api/store';
 import Header from '../../components/Header';
 import Product from '../../components/Product';
 
+import search from '../../assets/icons/search.svg';
 import * as S from './styles';
 
 const Store = () => {
   const [sneakers, setSneakers] = useState([]);
+  const [sneakersData, setSneakersData] = useState([]);
+  const [filterInput, setFilterInput] = useState('');
   const fetchSneakers = useCallback(async () => {
     const { data } = await getSneakers();
-    setSneakers(data?.results);
+    setSneakersData(data?.results);
   }, []);
 
   useEffect(() => {
@@ -18,17 +21,36 @@ const Store = () => {
       fetchSneakers();
     };
     onLoadPage();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchSneakers]);
+
+  useEffect(() => {
+    const onFilter = () => {
+      setSneakers(sneakersData.filter(sneaker => sneaker.description.toLowerCase().includes(filterInput.toLowerCase())));
+    };
+    onFilter();
+  }, [sneakersData, filterInput]);
+
+  const handleInputChange = value => {
+    setFilterInput(value);
+  };
 
   return (
     <>
       <Header title="Sneakers" />
-      <S.Container>
+      <S.ContainerFilter>
+        <S.Search src={search} alt="search" />
+        <S.FilterInput
+          placeholder="Search for your sneaker"
+          type="text"
+          value={filterInput}
+          onChange={e => handleInputChange(e.currentTarget.value)}
+        />
+      </S.ContainerFilter>
+      <S.ContainerProducts>
         {sneakers.map(sneaker => (
           <Product key={sneaker.id} product={sneaker} />
         ))}
-      </S.Container>
+      </S.ContainerProducts>
     </>
   );
 };
