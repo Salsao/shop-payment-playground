@@ -13,3 +13,8 @@ export const SIZES = [37, 38, 39, 40, 41, 42, 43];
 export const ONLINE_BANKING = 1;
 export const CARD = 2;
 export const APPLE_PAY = 3;
+
+// Progress bar
+export const STEP_CART = 1;
+export const STEP_PAYMENT = 2;
+export const STEP_RECEIPT = 3;

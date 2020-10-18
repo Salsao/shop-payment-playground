@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header';
+import ProgressBar from '../../components/ProgressBar';
 import { SneakerContext } from '../../context/Sneaker';
 import { currencyValue } from '../../utils/currencyValue';
-import { APPLE_PAY, CARD, ONLINE_BANKING, STORE_PATH } from '../../constants';
+import { APPLE_PAY, CARD, ONLINE_BANKING, STEP_PAYMENT, STORE_PATH } from '../../constants';
 
 import * as S from './styles';
 
@@ -25,15 +26,7 @@ const Checkout = () => {
   return (
     <>
       <Header title="Sneakers" hasBackButton />
-      <div>
-        <div className="progressbar-wrapper">
-          <ul className="progressbar">
-            <li className="active">Cart</li>
-            <li className="active">Payment options</li>
-            <li>Receipt</li>
-          </ul>
-        </div>
-      </div>
+      <ProgressBar step={STEP_PAYMENT} />
       <S.Container>
         <S.ImageContainer>
           <S.ProductImage src={sneaker?.maxresURL} alt="product" />
