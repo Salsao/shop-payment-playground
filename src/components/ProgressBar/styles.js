@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ProgressBarContainer = styled.div`
   background: #ffffff;
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 5px;
 `;
@@ -10,12 +9,11 @@ export const ProgressBarContainer = styled.div`
 export const ProgressBarUl = styled.ul`
   display: flex;
   margin-bottom: 50px;
-  width: 150%;
 `;
 
 export const ProgressBarLi = styled.li`
   list-style-type: none;
-  width: 20%;
+  width: 33%;
   float: left;
   font-size: 12px;
   position: relative;
