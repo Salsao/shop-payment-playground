@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import ProgressBar from '../../components/ProgressBar';
 import { SneakerContext } from '../../context/Sneaker';
 import { currencyValue } from '../../utils/currencyValue';
-import { APPLE_PAY, CARD, ONLINE_BANKING, STEP_PAYMENT, STORE_PATH } from '../../constants';
+import { APPLE_PAY, CARD, CONFIRMATION_PATH, ONLINE_BANKING, STEP_PAYMENT, STORE_PATH } from '../../constants';
 
 import * as S from './styles';
 
@@ -13,6 +13,19 @@ const Checkout = () => {
   const history = useHistory();
   const { sneaker } = useContext(SneakerContext);
   const [selectedMethod, setSelectedMethod] = useState(null);
+
+  // eslint-disable-next-line consistent-return
+  window.PayWithMyBank.addPanelListener((command, event) => {
+    if (command === 'event' && event.type === 'new_location') {
+      if (event.data.indexOf('#success') === 0) {
+        history.push(CONFIRMATION_PATH);
+      } else {
+        // eslint-disable-next-line no-alert
+        alert('cancel!');
+      }
+      return false;
+    }
+  });
 
   useEffect(() => {
     const onLoadPage = () => {
@@ -22,6 +35,23 @@ const Checkout = () => {
     };
     onLoadPage();
   }, [history, sneaker]);
+
+  const handlePay = () => {
+    if (selectedMethod === ONLINE_BANKING) {
+      window.PayWithMyBank.establish({
+        accessId: 'D61EC9BAF0BB369B9438',
+        merchantId: '1004314986',
+        metadata: { demo: 'enabled' },
+        currency: 'USD',
+        paymentType: 'Deferred',
+        amount: (sneaker?.quantity * sneaker?.price).toFixed(2).toString(),
+        description: 'eduardosarapereira@gmail.com',
+        merchantReference: '123456',
+        returnUrl: '#success',
+        cancelUrl: '#cancel'
+      });
+    }
+  };
 
   return (
     <>
@@ -71,7 +101,7 @@ const Checkout = () => {
               Apple Pay
             </S.PaymentOption>
             <S.ContainerButton>
-              <S.ContinueButton>Continue</S.ContinueButton>
+              <S.ContinueButton onClick={handlePay}>Continue</S.ContinueButton>
             </S.ContainerButton>
           </S.Payment>
         </S.DetailsContainer>

@@ -1,4 +1,4 @@
-import { getCurrencySymbol } from './getCurrencySymbol';
+import { getCurrencySymbol } from '../constants';
 
 export const currencyValueWithSpace = (currency, value) => `${getCurrencySymbol[currency]} ${value}`;
 
