@@ -15,7 +15,7 @@ import * as S from './styles';
 const Checkout = () => {
   const history = useHistory();
   const { sneaker } = useContext(SneakerContext);
-  const [selectedMethod, setSelectedMethod] = useState(null);
+  const [selectedMethod, setSelectedMethod] = useState(ONLINE_BANKING);
 
   // eslint-disable-next-line consistent-return
   window.PayWithMyBank.addPanelListener((command, event) => {
