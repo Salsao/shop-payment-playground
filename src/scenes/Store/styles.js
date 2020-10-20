@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const ContainerFilter = styled.div`
   display: flex;
   margin: 0 200px 57px 200px;
+
+  @media (max-width: 768px) {
+    margin: 0 40px 35px 40px;
+  }
 `;
 
 export const Search = styled.img`
@@ -36,6 +40,11 @@ export const ContainerProducts = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 210px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin: 0 60px;
+  }
 
   ${'' /* &:after {
     content: '';
