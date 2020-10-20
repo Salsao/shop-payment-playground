@@ -5,6 +5,10 @@ export const Header = styled.div`
   display: flex;
   height: 87px;
   margin-bottom: 81px;
+
+  @media (max-width: 768px) {
+    background-color: #ffffff;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -13,6 +17,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   margin: 0 100px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    margin: 0 10px;
+  }
 `;
 
 export const BackButton = styled.button`
@@ -46,4 +54,8 @@ export const Title = styled.div`
   font-weight: normal;
   line-height: 30px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

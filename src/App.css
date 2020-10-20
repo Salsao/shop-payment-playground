@@ -2,7 +2,10 @@
 
 body {
   margin: 0;
-  position: absolute;
+
+  @media (max-width: 768px) {
+    position: absolute;
+  }
 }
 
 button:focus,
