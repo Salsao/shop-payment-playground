@@ -24,6 +24,7 @@ export const Description = styled.span`
 `;
 
 export const Options = styled.div`
+  color: #8d8d8d;
   display: flex;
   font-family: Open Sans;
   font-style: normal;
@@ -35,10 +36,6 @@ export const Options = styled.div`
   width: 100%;
 `;
 
-export const Size = styled.div``;
-
-export const Quantity = styled.div``;
-
 export const Price = styled.span`
   font-family: Open Sans;
   font-size: 21px;
@@ -46,6 +43,21 @@ export const Price = styled.span`
   font-weight: 600;
   line-height: 18px;
   margin-bottom: 15px;
+`;
+
+export const Select = styled.select`
+  border: 1px solid #e8e8e8;
+  border-radius: 25.2271px;
+  color: #808080;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  height: 27px;
+  line-height: 18px;
+  margin-left: 5px;
+  padding-left: 5px;
+  width: 69px;
 `;
 
 export const AddButton = styled.button`
