@@ -137,12 +137,42 @@ export const PaymentMethod = styled.span`
   margin-bottom: 20px;
 `;
 
+export const Discount = styled.div`
+  align-items: center;
+  color: #9e7d27;
+  background-color: #ffcc00;
+  border-radius: 2.079px;
+  bottom: 62px;
+  display: flex;
+  font-family: Open Sans;
+  font-size: 9.77px;
+  font-style: normal;
+  font-weight: bold;
+  height: 18px;
+  justify-content: center;
+  line-height: 13px;
+  position: absolute;
+  text-align: center;
+  width: 76px;
+`;
+
 export const PaymentOption = styled.button`
+  align-items: center;
   background: #ffffff;
   border: ${props => (props.selected ? '1px solid #5DAC50' : 'none')};
   border-radius: 10.8766px;
+  color: #a5a5a5;
+  display: flex;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
   height: 72px;
+  justify-content: space-between;
   margin-bottom: 20px;
+  padding: 24px;
+  position: relative;
 
   &:hover {
     cursor: pointer;

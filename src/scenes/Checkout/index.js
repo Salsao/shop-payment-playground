@@ -7,6 +7,9 @@ import { SneakerContext } from '../../context/Sneaker';
 import { currencyValue } from '../../utils/currencyValue';
 import { APPLE_PAY, CARD, CONFIRMATION_PATH, ONLINE_BANKING, STEP_PAYMENT, STORE_PATH } from '../../constants';
 
+import onlinePayment from '../../assets/icons/online-payment.svg';
+import cardPayment from '../../assets/icons/card-payment.svg';
+import applePayment from '../../assets/icons/apple-payment.svg';
 import * as S from './styles';
 
 const Checkout = () => {
@@ -92,13 +95,17 @@ const Checkout = () => {
           <S.Payment>
             <S.PaymentMethod>Select your payment method</S.PaymentMethod>
             <S.PaymentOption selected={selectedMethod === ONLINE_BANKING} onClick={() => setSelectedMethod(ONLINE_BANKING)}>
-              Online Banking
+              <S.Discount>Save $10</S.Discount>
+              <span>Online Banking</span>
+              <img src={onlinePayment} alt="online" />
             </S.PaymentOption>
             <S.PaymentOption selected={selectedMethod === CARD} onClick={() => setSelectedMethod(CARD)}>
-              Card payment
+              <span>Card payment</span>
+              <img src={cardPayment} alt="card" />
             </S.PaymentOption>
             <S.PaymentOption selected={selectedMethod === APPLE_PAY} onClick={() => setSelectedMethod(APPLE_PAY)}>
-              Apple Pay
+              <span>Apple Pay</span>
+              <img src={applePayment} alt="apple" />
             </S.PaymentOption>
             <S.ContainerButton>
               <S.ContinueButton onClick={handlePay}>Continue</S.ContinueButton>
