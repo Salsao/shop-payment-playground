@@ -3,6 +3,28 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   margin: 0 100px;
+
+  @media (max-width: 768px) {
+    margin: 0 40px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+`;
+
+export const CheckoutMobile = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23.9328px;
+    line-height: 33px;
+    margin: 0 40px 5px 40px;
+  }
 `;
 
 // background-size: cover;
@@ -14,6 +36,13 @@ export const ImageContainer = styled.div`
   min-height: 630px;
   min-width: 530px;
   background-size: 260%;
+
+  @media (max-width: 768px) {
+    min-height: 130px;
+    min-width: 100px;
+    height: 130px;
+    background-size: 300%;
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -21,15 +50,28 @@ export const DetailsContainer = styled.div`
   border-radius: 10.8766px;
   padding: 35px;
   width: 730px;
+
+  @media (max-width: 768px) {
+    display: contents;
+  }
 `;
 
 export const PurchaseDetails = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    display: contents;
+  }
 `;
 
-export const Cart = styled.div``;
+export const Cart = styled.div`
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+`;
 
 export const CartTotal = styled.div`
   font-family: Open Sans;
@@ -38,6 +80,10 @@ export const CartTotal = styled.div`
   font-style: normal;
   font-weight: normal;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Description = styled.div`
@@ -47,6 +93,10 @@ export const Description = styled.div`
   font-style: normal;
   font-weight: normal;
   margin-bottom: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const ProductDetails = styled.div`
@@ -58,11 +108,19 @@ export const ProductDetails = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Delivery = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const DeliveryDetails = styled.div`
@@ -72,6 +130,11 @@ export const DeliveryDetails = styled.div`
   font-weight: normal;
   line-height: 154.6%;
   margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
 `;
 
 export const Address = styled.div`
@@ -85,10 +148,18 @@ export const Address = styled.div`
   letter-spacing: 0.612903px;
   line-height: 153.3%;
   margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 export const Cost = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const CostInfo = styled.div`
@@ -125,6 +196,26 @@ export const Value = styled.span`
 export const Payment = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const PaymentMobile = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16.9328px;
+    line-height: 23px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
 `;
 
 export const PaymentMethod = styled.span`
@@ -134,6 +225,10 @@ export const PaymentMethod = styled.span`
   font-style: normal;
   font-weight: normal;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Discount = styled.div`
@@ -199,5 +294,9 @@ export const ContinueButton = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;

@@ -1,11 +1,7 @@
 @import url('//fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-  margin: 0;
-
-  @media (max-width: 768px) {
-    position: absolute;
-  }
+  margin: 0 0 40px 0;
 }
 
 button:focus,
