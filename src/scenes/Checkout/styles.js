@@ -5,16 +5,15 @@ export const Container = styled.div`
   margin: 0 100px;
 `;
 
+// background-size: cover;
 export const ImageContainer = styled.div`
-  margin-right: 50px;
-  max-height: 630px;
-  max-width: 530px;
-`;
-
-export const ProductImage = styled.img`
+  background: ${props => (props.image ? `url(${props.image})` : 'none')};
+  background-position: center;
   border-radius: 10.8766px;
-  max-height: 630px;
-  max-width: 530px;
+  margin-right: 50px;
+  min-height: 630px;
+  min-width: 530px;
+  background-size: 260%;
 `;
 
 export const DetailsContainer = styled.div`

@@ -61,9 +61,7 @@ const Checkout = () => {
       <Header title="Sneakers" hasBackButton handleBackButton={() => history.push(STORE_PATH)} />
       <ProgressBar step={STEP_PAYMENT} />
       <S.Container>
-        <S.ImageContainer>
-          <S.ProductImage src={sneaker?.maxresURL} alt="product" />
-        </S.ImageContainer>
+        <S.ImageContainer image={sneaker?.maxresURL} />
         <S.DetailsContainer>
           <S.PurchaseDetails>
             <S.Cart>
