@@ -4,6 +4,10 @@ export const ProgressBarContainer = styled.div`
   background: #ffffff;
   padding-top: 10px;
   padding-bottom: 5px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ProgressBarUl = styled.ul`
