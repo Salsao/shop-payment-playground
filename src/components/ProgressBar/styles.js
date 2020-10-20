@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
+import { colors } from '../../constants';
+
 export const ProgressBarContainer = styled.div`
-  background: #ffffff;
+  background: ${colors.white};
   padding-top: 10px;
   padding-bottom: 5px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ProgressBarUl = styled.ul`
@@ -18,7 +24,7 @@ export const ProgressBarLi = styled.li`
   font-size: 12px;
   position: relative;
   text-align: center;
-  color: ${props => (props.active ? '#000000' : '#7d7d7d')};
+  color: ${props => (props.active ? colors.black : colors.gray9)};
   font-family: Arial;
   font-size: 16px;
   font-style: normal;
@@ -37,7 +43,7 @@ export const ProgressBarLi = styled.li`
     border-radius: 50%;
     position: relative;
     z-index: 2;
-    background-color: ${props => (props.active ? '#61cb46' : '#e8e8e8')};
+    background-color: ${props => (props.active ? colors.lightGreen : colors.gray3)};
   }
 
   &:after {
@@ -45,7 +51,7 @@ export const ProgressBarLi = styled.li`
     height: 1px;
     content: '';
     position: absolute;
-    background-color: #e8e8e8;
+    background-color: ${colors.gray3};
     top: 6px;
     left: -50%;
     z-index: 0;

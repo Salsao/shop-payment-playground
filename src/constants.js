@@ -24,3 +24,24 @@ export const STEP_RECEIPT = 3;
 export const getCurrencySymbol = {
   [CURRENCY_USD]: '$'
 };
+
+export const colors = {
+  green: '#5dac50',
+  darkGreen: '#6b8067',
+  lightGreen: '#61cb46',
+  white: '#ffffff',
+  black: '#000000',
+  yellow: '#9e7d27',
+  brightYellow: '#ffcc00',
+  gray1: '#f1f1f1',
+  gray2: '#f7f7f7',
+  gray3: '#e8e8e8',
+  gray4: '#a5a5a5',
+  gray5: '#979797',
+  gray6: '#d6d6d6',
+  gray7: '#8d8d8d',
+  gray8: '#808080',
+  gray9: '#7d7d7d',
+  gray10: '#a8a8a8',
+  gray11: '#bdbdbd'
+};

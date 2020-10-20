@@ -61,14 +61,16 @@ const Confirmation = () => {
                 Online Banking
               </S.SelectPaymentMethod>
             </S.Payment>
-            <div />
+            <S.Line />
           </S.OrderDetails>
           <S.Cost>
-            <S.CostInfo>
-              <S.TotalCost>Total Cost</S.TotalCost>
-              <S.DeliveryIncluded>Delivery included</S.DeliveryIncluded>
-            </S.CostInfo>
-            <S.Value>{currencyValue(sneaker?.currency, sneaker?.quantity * sneaker?.price)}</S.Value>
+            <S.CostContainer>
+              <S.CostInfo>
+                <S.TotalCost>Total Cost</S.TotalCost>
+                <S.DeliveryIncluded>Delivery included</S.DeliveryIncluded>
+              </S.CostInfo>
+              <S.Value>{currencyValue(sneaker?.currency, sneaker?.quantity * sneaker?.price)}</S.Value>
+            </S.CostContainer>
             <S.PlaceOrderButton>Place order</S.PlaceOrderButton>
           </S.Cost>
         </S.DetailsContainer>

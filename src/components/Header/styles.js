@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
+import { colors } from '../../constants';
+
 export const Header = styled.div`
-  background-color: #f1f1f1;
+  background-color: ${colors.gray1};
   display: flex;
   height: 87px;
   margin-bottom: 81px;
+
+  @media (max-width: 768px) {
+    background-color: ${colors.white};
+    margin-bottom: 10px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -13,6 +20,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   margin: 0 100px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    margin: 0 10px;
+  }
 `;
 
 export const BackButton = styled.button`
@@ -39,11 +50,15 @@ export const Arrow = styled.img`
 `;
 
 export const Title = styled.div`
-  color: #000000;
+  color: ${colors.black};
   font-family: Arial;
   font-size: 26.1038px;
   font-style: normal;
   font-weight: normal;
   line-height: 30px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

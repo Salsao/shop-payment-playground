@@ -60,6 +60,7 @@ const Checkout = () => {
     <>
       <Header title="Sneakers" hasBackButton handleBackButton={() => history.push(STORE_PATH)} />
       <ProgressBar step={STEP_PAYMENT} />
+      <S.CheckoutMobile>Checkout</S.CheckoutMobile>
       <S.Container>
         <S.ImageContainer image={sneaker?.maxresURL} />
         <S.DetailsContainer>
@@ -90,6 +91,7 @@ const Checkout = () => {
               </S.Cost>
             </S.Delivery>
           </S.PurchaseDetails>
+          <S.PaymentMobile>Payment method</S.PaymentMobile>
           <S.Payment>
             <S.PaymentMethod>Select your payment method</S.PaymentMethod>
             <S.PaymentOption selected={selectedMethod === ONLINE_BANKING} onClick={() => setSelectedMethod(ONLINE_BANKING)}>

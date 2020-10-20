@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '../../constants';
+
 export const Card = styled.div`
   align-items: center;
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.05);
@@ -24,7 +26,7 @@ export const Description = styled.span`
 `;
 
 export const Options = styled.div`
-  color: #8d8d8d;
+  color: ${colors.gray7};
   display: flex;
   font-family: Open Sans;
   font-style: normal;
@@ -46,9 +48,9 @@ export const Price = styled.span`
 `;
 
 export const Select = styled.select`
-  border: 1px solid #e8e8e8;
+  border: 1px solid ${colors.gray3};
   border-radius: 25.2271px;
-  color: #808080;
+  color: ${colors.gray8};
   font-family: Open Sans;
   font-size: 12px;
   font-style: normal;
@@ -61,10 +63,10 @@ export const Select = styled.select`
 `;
 
 export const AddButton = styled.button`
-  background-color: #6b8067;
+  background-color: ${colors.darkGreen};
   border: none;
   border-radius: 4.50483px;
-  color: #ffffff;
+  color: ${colors.white};
   font-family: Open Sans;
   font-size: 14px;
   font-style: normal;
