@@ -49,7 +49,7 @@ const Checkout = () => {
         paymentType: 'Deferred',
         amount: (sneaker?.quantity * sneaker?.price).toFixed(2).toString(),
         description: 'eduardosarapereira@gmail.com',
-        merchantReference: '123456',
+        merchantReference: '121212',
         returnUrl: '#success',
         cancelUrl: '#cancel'
       });
