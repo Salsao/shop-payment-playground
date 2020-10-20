@@ -3,6 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   margin: 0 100px;
+
+  @media (max-width: 768px) {
+    margin: 0 40px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -13,6 +21,13 @@ export const ImageContainer = styled.div`
   min-height: 562px;
   min-width: 530px;
   background-size: 260%;
+
+  @media (max-width: 768px) {
+    min-height: 130px;
+    min-width: 100px;
+    height: 130px;
+    background-size: 300%;
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -20,12 +35,28 @@ export const DetailsContainer = styled.div`
   border-radius: 10.8766px;
   padding: 65px 50px;
   width: 730px;
+
+  @media (max-width: 768px) {
+    display: contents;
+  }
 `;
 
 export const OrderDetails = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 85px;
+
+  @media (max-width: 768px) {
+    display: contents;
+  }
+`;
+
+export const Line = styled.div`
+  @media (max-width: 768px) {
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    margin-bottom: 15px;
+  }
 `;
 
 export const Order = styled.div``;
@@ -62,6 +93,11 @@ export const ProductDetails = styled.div`
 export const Payment = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    width: 100%;
+  }
 `;
 
 export const PaymentMethod = styled.div`
@@ -88,6 +124,21 @@ export const SelectPaymentMethod = styled.div`
 export const Cost = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+export const CostContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 `;
 
 export const CostInfo = styled.div`
@@ -121,6 +172,10 @@ export const Value = styled.span`
   font-style: normal;
   font-weight: bold;
   margin-right: 40px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 export const PlaceOrderButton = styled.button`
@@ -139,5 +194,9 @@ export const PlaceOrderButton = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
