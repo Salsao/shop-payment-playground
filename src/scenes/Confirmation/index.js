@@ -41,9 +41,7 @@ const Confirmation = () => {
       <Header title="Review and Confirmation" hasBackButton handleBackButton={() => history.push(CHECKOUT_PATH)} />
       <ProgressBar step={STEP_RECEIPT} />
       <S.Container>
-        <S.ImageContainer>
-          <S.ProductImage src={sneaker?.maxresURL} alt="product" />
-        </S.ImageContainer>
+        <S.ImageContainer image={sneaker?.maxresURL} />
         <S.DetailsContainer>
           <S.OrderDetails>
             <S.Order>

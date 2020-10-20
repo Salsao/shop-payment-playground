@@ -6,28 +6,26 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  margin-right: 50px;
-  max-height: 630px;
-  max-width: 530px;
-`;
-
-export const ProductImage = styled.img`
+  background: ${props => (props.image ? `url(${props.image})` : 'none')};
+  background-position: center;
   border-radius: 10.8766px;
-  max-height: 630px;
-  max-width: 530px;
+  margin-right: 50px;
+  min-height: 562px;
+  min-width: 530px;
+  background-size: 260%;
 `;
 
 export const DetailsContainer = styled.div`
   background: #f7f7f7;
   border-radius: 10.8766px;
-  padding: 35px;
+  padding: 65px 50px;
   width: 730px;
 `;
 
 export const OrderDetails = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 85px;
 `;
 
 export const Order = styled.div``;
@@ -89,6 +87,7 @@ export const SelectPaymentMethod = styled.div`
 
 export const Cost = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const CostInfo = styled.div`
