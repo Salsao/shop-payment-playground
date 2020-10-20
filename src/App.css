@@ -5,6 +5,7 @@ body {
 }
 
 button:focus,
+select:focus,
 input:focus {
   outline: none;
 }

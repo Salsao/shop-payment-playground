@@ -27,26 +27,26 @@ const Product = ({ product }) => {
       <S.Thumbnail src={product?.thumbnailURL} alt="thumbnail" />
       <S.Description>{product?.description}</S.Description>
       <S.Options>
-        <S.Size>
+        <div>
           Size{' '}
-          <select value={productForm?.size} onChange={e => handleInputChange('size', e.currentTarget.value)}>
+          <S.Select value={productForm?.size} onChange={e => handleInputChange('size', e.currentTarget.value)}>
             {SIZES.map(size => (
               <option key={size} value={size}>
                 {size}
               </option>
             ))}
-          </select>{' '}
-        </S.Size>
-        <S.Quantity>
+          </S.Select>{' '}
+        </div>
+        <div>
           Quantity{' '}
-          <select value={productForm?.quantity} onChange={e => handleInputChange('quantity', e.currentTarget.value)}>
+          <S.Select value={productForm?.quantity} onChange={e => handleInputChange('quantity', e.currentTarget.value)}>
             {QUANTITY.map(quantity => (
               <option key={quantity} value={quantity}>
                 {quantity}
               </option>
             ))}
-          </select>
-        </S.Quantity>
+          </S.Select>
+        </div>
       </S.Options>
       <S.Price>{currencyValueWithSpace(product?.currency, product?.price)}</S.Price>
       <S.AddButton onClick={() => handleAddToCart(product)}>Add to cart</S.AddButton>
