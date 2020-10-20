@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
+import { colors } from '../../constants';
+
 export const Header = styled.div`
-  background-color: #f1f1f1;
+  background-color: ${colors.gray1};
   display: flex;
   height: 87px;
   margin-bottom: 81px;
 
   @media (max-width: 768px) {
-    background-color: #ffffff;
+    background-color: ${colors.white};
     margin-bottom: 10px;
   }
 `;
@@ -48,7 +50,7 @@ export const Arrow = styled.img`
 `;
 
 export const Title = styled.div`
-  color: #000000;
+  color: ${colors.black};
   font-family: Arial;
   font-size: 26.1038px;
   font-style: normal;

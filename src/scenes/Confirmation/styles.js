@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
+import { colors } from '../../constants';
+
 export const Container = styled.div`
   display: flex;
   margin: 0 100px;
 
   @media (max-width: 768px) {
-    margin: 0 40px;
-    background-color: #f7f7f7;
-    padding: 15px;
+    background-color: ${colors.gray2};
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0 40px;
+    padding: 15px;
   }
 `;
 
@@ -23,15 +25,15 @@ export const ImageContainer = styled.div`
   background-size: 260%;
 
   @media (max-width: 768px) {
+    background-size: 300%;
+    height: 130px;
     min-height: 130px;
     min-width: 100px;
-    height: 130px;
-    background-size: 300%;
   }
 `;
 
 export const DetailsContainer = styled.div`
-  background: #f7f7f7;
+  background: ${colors.gray2};
   border-radius: 10.8766px;
   padding: 65px 50px;
   width: 730px;
@@ -53,9 +55,9 @@ export const OrderDetails = styled.div`
 
 export const Line = styled.div`
   @media (max-width: 768px) {
-    border: 1px solid #d6d6d6;
-    width: 100%;
+    border: 1px solid ${colors.gray6};
     margin-bottom: 15px;
+    width: 100%;
   }
 `;
 
@@ -80,7 +82,7 @@ export const Description = styled.div`
 `;
 
 export const ProductDetails = styled.div`
-  color: #a5a5a5;
+  color: ${colors.gray4};
   display: flex;
   flex-direction: column;
   font-family: Open Sans;
@@ -135,9 +137,9 @@ export const CostContainer = styled.div`
   display: flex;
 
   @media (max-width: 768px) {
-    width: 100%;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 100%;
   }
 `;
 
@@ -156,7 +158,7 @@ export const TotalCost = styled.span`
 `;
 
 export const DeliveryIncluded = styled.span`
-  color: #a5a5a5;
+  color: ${colors.gray4};
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -179,10 +181,10 @@ export const Value = styled.span`
 `;
 
 export const PlaceOrderButton = styled.button`
-  background: #6b8067;
+  background: ${colors.darkGreen};
   border: none;
   border-radius: 5px;
-  color: #ffffff;
+  color: ${colors.white};
   font-family: Open Sans;
   font-size: 14px;
   font-style: normal;
